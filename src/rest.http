@@ -1,0 +1,61 @@
+###
+POST http://127.0.0.1:52142/users
+content-type: application/json
+
+{
+  "name": "kim",
+  "email": "kim@gmail.com",
+  "pwd": "test123"
+}
+
+###
+POST http://127.0.0.1:8000/user-service/users
+content-type: application/json
+
+{
+  "name": "lee22",
+  "email": "lee22@gmail.com",
+  "pwd": "test123"
+}
+
+###
+GET http://localhost:8000/user-service/health_check
+
+###
+GET http://localhost:61801/health_check
+
+###
+GET http://localhost:59719/actuator/beans
+
+###
+POST http://localhost:59719/actuator/refresh
+Content-Type: text/plain
+
+{
+  "spring.cloud.bootstrap.enabled"
+}
+
+###
+GET http://localhost:8000/user-service/users
+
+###
+GET http://localhost:8000/user-service/users/d1c7dc43-afad-42e2-b3d5-87c8a48d5ed9
+
+###
+POST http://localhost:52142/login
+Content-Type: application/json
+
+{
+  "email": "lee@gmail.com",
+  "password": "test123"
+}
+
+###
+POST http://localhost:8000/user-service/login
+Content-Type: application/json
+
+{
+  "email": "lee22@gmail.com",
+  "password": "test123"
+}
+
