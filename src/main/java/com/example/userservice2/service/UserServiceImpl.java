@@ -80,6 +80,7 @@ public class UserServiceImpl implements UserService {
         mapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         UserDto userDto = mapper.map(findUser, UserDto.class);
 
+        /*RestTemplate*/
 //        List<ResponseOrder> orderList = new ArrayList<>();
 //        String orderUrl = String.format(env.getProperty("order_service.url"), userId);
 //        ResponseEntity<List<ResponseOrder>> exchange = restTemplate.exchange(orderUrl,

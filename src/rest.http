@@ -1,4 +1,4 @@
-###
+###1
 POST http://127.0.0.1:52142/users
 content-type: application/json
 
@@ -8,26 +8,45 @@ content-type: application/json
   "pwd": "test123"
 }
 
-###
+###2
+POST http://localhost:52142/login
+Content-Type: application/json
+
+{
+  "email": "kim@gmail.com",
+  "password": "kim123"
+}
+
+###3
+#signup test
 POST http://127.0.0.1:8000/user-service/users
 content-type: application/json
 
 {
-  "name": "lee22",
-  "email": "lee22@gmail.com",
-  "pwd": "test123"
+  "name": "lee1",
+  "email": "lee1@gmail.com",
+  "pwd": "lee1"
 }
 
-###
+###4
+POST http://localhost:8000/user-service/login
+Content-Type: application/json
+
+{
+  "email": "lee1@gmail.com",
+  "password": "lee1"
+}
+
+###5
 GET http://localhost:8000/user-service/health_check
 
-###
+###6
 GET http://localhost:61801/health_check
 
-###
+###7
 GET http://localhost:59719/actuator/beans
 
-###
+###8
 POST http://localhost:59719/actuator/refresh
 Content-Type: text/plain
 
@@ -35,27 +54,9 @@ Content-Type: text/plain
   "spring.cloud.bootstrap.enabled"
 }
 
-###
+###9
 GET http://localhost:8000/user-service/users
 
-###
-GET http://localhost:8000/user-service/users/d1c7dc43-afad-42e2-b3d5-87c8a48d5ed9
-
-###
-POST http://localhost:52142/login
-Content-Type: application/json
-
-{
-  "email": "lee@gmail.com",
-  "password": "test123"
-}
-
-###
-POST http://localhost:8000/user-service/login
-Content-Type: application/json
-
-{
-  "email": "lee22@gmail.com",
-  "password": "test123"
-}
-
+###10
+GET http://localhost:8000/user-service/users/4d5b2aa8-524e-43a3-9d53-5828b0910fe2
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0ZDViMmFhOC01MjRlLTQzYTMtOWQ1My01ODI4YjA5MTBmZTIiLCJleHAiOjE3MDcwMzE2MjB9.GAY5gzsPPXRWm91ostKJsRWXm67Q1gGmWG8hA5qA4MUG5Qww66k2zQX5PjUdQxmZVBNNa3RNgKxr2xEpoiD7Jw

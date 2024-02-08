@@ -42,7 +42,7 @@ greeting:
 
 logging:
   level:
-    com.example.userservice2.client: debug
+    com.example.userservice2.client: debug #FeignClient log tracking
 
 #token:
 #  expiration_time: 360000 #1hour
